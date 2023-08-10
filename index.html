@@ -26,9 +26,9 @@
         <h2 classs="center" style="color: #fef200;">UNLOCK YOU SECRET</h2>
         <h3 style="color: #ffffff;">Personal</h3>
         </div>
-    <div class="row">
+    <div class="row mt-3">
         <!-- Main Content -->
-        <div class="col-lg-9" id="maindiv">
+        <div class="col-lg-9 " id="maindiv">
             <div class="row">
                 <div class="col-4 text-right">
                     <label for="textbox1">ชื่อ:</label>
@@ -77,12 +77,12 @@
         </div>
     </div>
 
-    <div class="row  bg-dark">
+    <div class="row  bg-dark mt-3">
         <h3 style="color: #fef200;">UNLOCK YOU SECRET</h3>
         <h2 style="color: #ffffff;">Company/Brand</h2>
         </div>
 
-        <div class="row">
+        <div class="row  mt-5">
             <!-- Main Content -->
             <div class="col-lg-9" id="maindiv">
                 <div class="row">
@@ -90,11 +90,11 @@
                         <label for="textbox1">ชื่อบริษัท/แบรนด์ :</label>
                     </div>
                     <div class="col-4">
-                        <input type="text" id="textbox1" class="form-control" placeholder="พิมชื่ิอ">
+                        <input type="text" id="textboxBandThai" class="form-control" placeholder="ชื่อแบรนด์ภาษาไทย">
                     </div>
     
                     <div class="col-4">
-                        <input type="text" id="textbox11" class="form-control" placeholder="คะแนนชื่อ">
+                        <input type="text" id="textboxBandThaiScore" class="form-control" placeholder="คะแนนภาษาไทย">
                     </div>
                 </div>
     
@@ -103,10 +103,10 @@
                         <label for="textbox2">ชื่อบริษัท/แบรนด์ :</label>
                     </div>
                     <div class="col-4">
-                        <input type="text" id="textbox2" class="form-control" placeholder="พิมนามสกุล">
+                        <input type="text" id="textboxBandEng" class="form-control" placeholder="ชื่อแบรนด์ภาษาอังกฤษ">
                     </div>
                     <div class="col-4">
-                        <input type="text" id="textbox22" class="form-control" placeholder="คะแนนนามสกุล">
+                        <input type="text" id="textboxBandEngScore" class="form-control" placeholder="คะแนนภาษาอังกฤษ">
                     </div>
                 </div>
     
@@ -115,19 +115,19 @@
                         <label for="textbox3">ผลรวม:</label>
                     </div>
                     <div class="col-4">
-                        <input type="text" id="textbox3" class="form-control" placeholder="คะแนนรวม">
+                        <input type="text" id="textboxBandSum" class="form-control" placeholder="คะแนนรวม">
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="row  bg-dark">
+        <div class="row  bg-dark mt-3">
             <h2 style="color: #fef200;">UNLOCK YOU SECRET</h2>
             <h3 style="color: #ffffff;">Slogan</h3>
             </div>
     
-            <div class="row">
+            <div class="row  mt-5">
                 <!-- Main Content -->
                 <div class="col-lg-9" id="maindiv">
                     <div class="row">
@@ -135,11 +135,11 @@
                             <label for="textbox1">สโลแกน :</label>
                         </div>
                         <div class="col-4">
-                            <input type="text" id="textbox1" class="form-control" placeholder="พิมชื่ิอ">
+                            <input type="text" id="textboxSloganThai" class="form-control" placeholder="สโลแกนภาษาไทย">
                         </div>
         
                         <div class="col-4">
-                            <input type="text" id="textbox11" class="form-control" placeholder="คะแนนชื่อ">
+                            <input type="text" id="textboxSloganThaiScore" class="form-control" placeholder="คะแนนสโลแกนภาษาไทย">
                         </div>
                     </div>
         
@@ -148,26 +148,26 @@
                             <label for="textbox2">สโลแกน :</label>
                         </div>
                         <div class="col-4">
-                            <input type="text" id="textbox2" class="form-control" placeholder="พิมนามสกุล">
+                            <input type="text" id="textboxSloganEnglish" class="form-control" placeholder="สโลแกนภาษาอังกฤษ" >
                         </div>
                         <div class="col-4">
-                            <input type="text" id="textbox22" class="form-control" placeholder="คะแนนนามสกุล">
+                            <input type="text" id="textboxSloganEnglishScore" class="form-control" placeholder="คะแนนสโลแกนภาษาอังกฤษ">
                         </div>
                     </div>
         
-                    <div class="row mt-3">
+                    <div class="row mt-3 mb-3">
                         <div class="col-8 text-right">
                             <label for="textbox3">ผลรวม:</label>
                         </div>
                         <div class="col-4">
-                            <input type="text" id="textbox3" class="form-control" placeholder="คะแนนรวม">
+                            <input type="text" id="textboxSumSlogan" class="form-control" placeholder="ผลรวมคะแนนสโลแกน">
                         </div>
                     </div>
                 </div>
     
             </div>
 
-            <div class="row bg-dark">
+            <div class="row bg-dark mt-3">
                 <h2 style="color: #fef200;">จองคิว</h2>
                 <h3 style="color: #ffffff;"> วิเคราะห์เจาะลึก Unlock Your Secret</h3>
             </div>
@@ -195,6 +195,19 @@
     let resultSInput = document.getElementById('textbox22');
     let resultCode1 = document.getElementById('code1');
     let resultCode2 = document.getElementById('code2');
+
+    let textboxSumSlogan = document.getElementById('textboxSumSlogan');
+    let textboxSloganThai = document.getElementById('textboxSloganThai');
+    let textboxSloganEnglish = document.getElementById('textboxSloganEnglish');
+    let textboxSloganThaiScore = document.getElementById('textboxSloganThaiScore');
+    let textboxSloganEnglishScore = document.getElementById('textboxSloganEnglishScore');
+
+    let textboxBandSum = document.getElementById('textboxBandSum');
+    let textboxBandThai = document.getElementById('textboxBandThai');
+    let textboxBandEng = document.getElementById('textboxBandEng');
+    let textboxBandThaiScore = document.getElementById('textboxBandThaiScore');
+    let textboxBandEngScore  = document.getElementById('textboxBandEngScore ');
+
     function calculateScore(str) {
         let score = 0;
         for(let i = 0; i < str.length; i++) {
@@ -326,9 +339,49 @@
         resultCode1.value = reduceToOneDigit(totalScoreBlack)
     }
 
+    function updateScoreBand() {
+
+let totalScoreBandThai =  calculateScore(textboxBandThai.value);
+let totalScoreBandEng =  calculateScore(textboxBandEng.value);
+let totalScore = totalScoreBandThai+ totalScoreBandEng;
+
+
+textboxBandThaiScore.value = totalScoreBandThai;
+textboxBandEngScore.value = totalScoreBandEng;
+textboxBandSum.value = totalScore;
+
+}
+
+function updateScoreSlogan() {
+
+let totalScoreSloganThai =  calculateScore(totalScoreSloganThai.value);
+let totalScoreSloganEng =  calculateScore(textboxSloganEnglish.value);
+let totalScore = totalScoreBandThai+ totalScoreBandEng;
+
+
+textboxSloganThai.value = totalScoreSloganThai;
+textboxSloganEnglish.value = totalScoreSloganEng;
+textboxSumSlogan.value = totalScore;
+
+}
+
+
+
+
+
+
 
     nameInput.addEventListener('input', updateScore);
     surnameInput.addEventListener('input', updateScore);
+
+    textboxBandThai.addEventListener('input', updateScoreBand);
+    textboxBandEng.addEventListener('input', updateScoreBand);
+
+
+    textboxSloganThai.addEventListener('input', updateScoreSlogan);
+    textboxSloganEnglish.addEventListener('input', updateScoreSlogan);
+
+
 });
 </script>
 </body>
