@@ -22,7 +22,7 @@
     </div>
 
 <div class="container mt-5">
-    <div class="row  bg-dark center">
+    <div class="row  bg-dark text-center">
         <h2 classs="center" style="color: #fef200;">UNLOCK YOU SECRET</h2>
         <h3 style="color: #ffffff;">Personal</h3>
         </div>
@@ -77,7 +77,7 @@
         </div>
     </div>
 
-    <div class="row  bg-dark mt-3">
+    <div class="row  bg-dark mt-3 text-center">
         <h3 style="color: #fef200;">UNLOCK YOU SECRET</h3>
         <h2 style="color: #ffffff;">Company/Brand</h2>
         </div>
@@ -122,7 +122,7 @@
 
         </div>
 
-        <div class="row  bg-dark mt-3">
+        <div class="row  bg-dark mt-3 text-center">
             <h2 style="color: #fef200;">UNLOCK YOU SECRET</h2>
             <h3 style="color: #ffffff;">Slogan</h3>
             </div>
@@ -167,7 +167,7 @@
     
             </div>
 
-            <div class="row bg-dark mt-3">
+            <div class="row bg-dark mt-3 text-center">
                 <h2 style="color: #fef200;">จองคิว</h2>
                 <h3 style="color: #ffffff;"> วิเคราะห์เจาะลึก Unlock Your Secret</h3>
             </div>
@@ -206,7 +206,7 @@
     let textboxBandThai = document.getElementById('textboxBandThai');
     let textboxBandEng = document.getElementById('textboxBandEng');
     let textboxBandThaiScore = document.getElementById('textboxBandThaiScore');
-    let textboxBandEngScore  = document.getElementById('textboxBandEngScore ');
+    let textboxBandEngScore  = document.getElementById('textboxBandEngScore');
 
     function calculateScore(str) {
         let score = 0;
@@ -342,7 +342,7 @@
     function updateScoreBand() {
 
 let totalScoreBandThai =  calculateScore(textboxBandThai.value);
-let totalScoreBandEng =  calculateScore(textboxBandEng.value);
+let totalScoreBandEng =   calculateScore(textboxBandEng.value);
 let totalScore = totalScoreBandThai+ totalScoreBandEng;
 
 
@@ -354,13 +354,13 @@ textboxBandSum.value = totalScore;
 
 function updateScoreSlogan() {
 
-let totalScoreSloganThai =  calculateScore(totalScoreSloganThai.value);
+let totalScoreSloganThai =  calculateScore(textboxSloganThai.value);
 let totalScoreSloganEng =  calculateScore(textboxSloganEnglish.value);
-let totalScore = totalScoreBandThai+ totalScoreBandEng;
+let totalScore = totalScoreSloganThai+ totalScoreSloganEng;
 
 
-textboxSloganThai.value = totalScoreSloganThai;
-textboxSloganEnglish.value = totalScoreSloganEng;
+textboxSloganThaiScore.value = totalScoreSloganThai;
+textboxSloganEnglishScore.value = totalScoreSloganEng;
 textboxSumSlogan.value = totalScore;
 
 }
