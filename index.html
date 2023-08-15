@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">    <title>Aj Phrang</title>
-<style type="css">
-        .row {
-        background-color: #414143;
-    }
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Aj Phrang</title>
+    <style>
+        .green-border {
+            border: 3px solid green;
+        }
+
+        .red-border {
+            border: 3px solid red;
+        }
+    </style>
 
 </head>
+
 <body>
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 text-center mb-4">
-               <img src="cover.png" class="img-fluid" alt="Responsive image" />
+                <img src="cover.png" class="img-fluid" alt="Responsive image" />
             </div>
             <!-- The rest of your code... -->
         </div>
     </div>
 
-<div class="container mt-5">
-    <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
-        <h3 classs="center" style="color: #fef200;">UNLOCK YOU SECRET</h3>
-        <h4 style="color: #ffffff;">Personal</h4>
+    <div class="container mt-5">
+        <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
+            <h3 classs="center" style="color: #fef200;">UNLOCK YOU SECRET</h3>
+            <h4 style="color: #ffffff;">Personal</h4>
         </div>
-    <div class="row mt-3">
-        <!-- Main Content -->
-        <div class="col-lg-9 " id="maindiv">
-            <div class="row">
-                <div class="col-4 text-right">
-                    <h5 for="textbox1">ชื่อ     :</h5>
-                    <h7 for="textbox1">(ไทย / อังกฤษ)   :</h7>
-                </div>
-                <div class="col-4">
-                    <input type="text" id="textbox1" class="form-control" placeholder="พิมชื่ิอ">
+        <div class="row mt-3">
+            <!-- Main Content -->
+            <div class="col-lg-9 " id="maindiv">
+                <div class="row">
+                    <div class="col-4 text-right">
+                        <h5 for="textbox1">ชื่อ :</h5>
+                        <h7 for="textbox1">(ไทย / อังกฤษ) :</h7>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textbox1" class="form-control" placeholder="พิมชื่ิอ">
+                    </div>
+
+                    <div class="col-4">
+                        <input type="text" id="textbox11" class="form-control" placeholder="คะแนนชื่อ">
+                    </div>
                 </div>
 
-                <div class="col-4">
-                    <input type="text" id="textbox11" class="form-control" placeholder="คะแนนชื่อ">
+                <div class="row mt-3">
+                    <div class="col-4 text-right">
+                        <h5 for="textbox1">นามสกุล :</h5>
+                        <h7 for="textbox1">(ไทย / อังกฤษ) :</h7>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textbox2" class="form-control" placeholder="พิมนามสกุล">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textbox22" class="form-control" placeholder="คะแนนนามสกุล">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-8 text-right">
+                        <label for="textbox3">ผลรวม:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textbox3" class="form-control" placeholder="คะแนนรวม">
+                    </div>
                 </div>
             </div>
 
-            <div class="row mt-3">
-                <div class="col-4 text-right">
-                    <h5 for="textbox1">นามสกุล    :</h5>
-                    <h7 for="textbox1">(ไทย / อังกฤษ)   :</h7>
+            <!-- Code div -->
+            <div class="col-lg-3" id="codediv">
+                <div class="mb-3">
+                    <label for="code1" class="form-label">รหัส1</label>
+                    <input type="text" id="code1" class="form-control" placeholder="คะแนน">
                 </div>
-                <div class="col-4">
-                    <input type="text" id="textbox2" class="form-control" placeholder="พิมนามสกุล">
-                </div>
-                <div class="col-4">
-                    <input type="text" id="textbox22" class="form-control" placeholder="คะแนนนามสกุล">
-                </div>
-            </div>
-
-            <div class="row mt-3">
-                <div class="col-8 text-right">
-                    <label for="textbox3">ผลรวม:</label>
-                </div>
-                <div class="col-4">
-                    <input type="text" id="textbox3" class="form-control" placeholder="คะแนนรวม">
+                <div>
+                    <label for="code2" class="form-label">รหัส2</label>
+                    <input type="text" id="code2" class="form-control" placeholder="คะแนน">
                 </div>
             </div>
         </div>
 
-        <!-- Code div -->
-        <div class="col-lg-3" id="codediv">
-            <div class="mb-3">
-                <label for="code1" class="form-label">รหัส1</label>
-                <input type="text" id="code1" class="form-control" placeholder="คะแนน">
-            </div>
-            <div>
-                <label for="code2" class="form-label">รหัส2</label>
-                <input type="text" id="code2" class="form-control" placeholder="คะแนน">
-            </div>
-        </div>
-    </div>
-
-    <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
-        <h3 style="color: #fef200;">UNLOCK YOU SECRET</h3>
-        <h4 style="color: #ffffff;">Company/Brand</h4>
+        <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
+            <h3 style="color: #fef200;">UNLOCK YOU SECRET</h3>
+            <h4 style="color: #ffffff;">Company/Brand</h4>
         </div>
 
         <div class="row  mt-5">
@@ -89,18 +97,18 @@
             <div class="col-lg-9" id="maindiv">
                 <div class="row">
                     <div class="col-4 text-right">
-                        <h5 >ชื่อบริษัท/แบรนด์ :</h5>
+                        <h5>ชื่อบริษัท/แบรนด์ :</h5>
                         <h7>(ไทย)</h7>
                     </div>
                     <div class="col-4">
                         <input type="text" id="textboxBandThai" class="form-control" placeholder="ชื่อแบรนด์ภาษาไทย">
                     </div>
-    
+
                     <div class="col-4">
                         <input type="text" id="textboxBandThaiScore" class="form-control" placeholder="คะแนนภาษาไทย">
                     </div>
                 </div>
-    
+
                 <div class="row mt-3">
                     <div class="col-4 text-right">
                         <h5 for="textbox2">ชื่อบริษัท/แบรนด์ :</h5>
@@ -113,7 +121,7 @@
                         <input type="text" id="textboxBandEngScore" class="form-control" placeholder="คะแนนภาษาอังกฤษ">
                     </div>
                 </div>
-    
+
                 <div class="row mt-3">
                     <div class="col-8 text-right">
                         <h5 for="textbox3">ผลรวม:</h5>
@@ -129,266 +137,367 @@
         <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
             <h3 style="color: #fef200;">UNLOCK YOU SECRET</h3>
             <h4 style="color: #ffffff;">Slogan</h4>
-            </div>
-    
-            <div class="row  mt-5">
-                <!-- Main Content -->
-                <div class="col-lg-9" id="maindiv">
-                    <div class="row">
-                        <div class="col-4 text-right">
-                            <h5 for="textbox1">สโลแกน :</h5>
-                            <h7 for="textbox1">(ไทย)</h7>
-                        </div>
-                        <div class="col-4">
-                            <input type="text" id="textboxSloganThai" class="form-control" placeholder="สโลแกนภาษาไทย">
-                        </div>
-        
-                        <div class="col-4">
-                            <input type="text" id="textboxSloganThaiScore" class="form-control" placeholder="คะแนนสโลแกนภาษาไทย">
-                        </div>
+        </div>
+
+        <div class="row  mt-5">
+            <!-- Main Content -->
+            <div class="col-lg-9" id="maindiv">
+                <div class="row">
+                    <div class="col-4 text-right">
+                        <h5 for="textbox1">สโลแกน :</h5>
+                        <h7 for="textbox1">(ไทย)</h7>
                     </div>
-        
-                    <div class="row mt-3">
-                        <div class="col-4 text-right">
-                            <h5 for="textbox1">สโลแกน :</h5>
-                            <h7 for="textbox1">(อังกฤษ)</h7>
-                        </div>
-                        <div class="col-4">
-                            <input type="text" id="textboxSloganEnglish" class="form-control" placeholder="สโลแกนภาษาอังกฤษ" >
-                        </div>
-                        <div class="col-4">
-                            <input type="text" id="textboxSloganEnglishScore" class="form-control" placeholder="คะแนนสโลแกนภาษาอังกฤษ">
-                        </div>
+                    <div class="col-4">
+                        <input type="text" id="textboxSloganThai" class="form-control" placeholder="สโลแกนภาษาไทย">
                     </div>
-        
-                    <div class="row mt-3 mb-3">
-                        <div class="col-8 text-right">
-                            <label for="textbox3">ผลรวม:</label>
-                        </div>
-                        <div class="col-4">
-                            <input type="text" id="textboxSumSlogan" class="form-control" placeholder="ผลรวมคะแนนสโลแกน">
-                        </div>
+
+                    <div class="col-4">
+                        <input type="text" id="textboxSloganThaiScore" class="form-control"
+                            placeholder="คะแนนสโลแกนภาษาไทย">
                     </div>
                 </div>
-    
+
+                <div class="row mt-3">
+                    <div class="col-4 text-right">
+                        <h5 for="textbox1">สโลแกน :</h5>
+                        <h7 for="textbox1">(อังกฤษ)</h7>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textboxSloganEnglish" class="form-control"
+                            placeholder="สโลแกนภาษาอังกฤษ">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textboxSloganEnglishScore" class="form-control"
+                            placeholder="คะแนนสโลแกนภาษาอังกฤษ">
+                    </div>
+                </div>
+
+                <div class="row mt-3 mb-3">
+                    <div class="col-8 text-right">
+                        <label for="textbox3">ผลรวม:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="textboxSumSlogan" class="form-control" placeholder="ผลรวมคะแนนสโลแกน">
+                    </div>
+                </div>
             </div>
 
-            <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
-                <h3 style="color: #fef200;">จองคิว</h3>
-                <h4 style="color: #ffffff;"> วิเคราะห์เจาะลึก Unlock Your Secret</h4>
-            </div>
-            
-</div>
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 text-center mb-4">
-           <img src="line.png" />
         </div>
-        <!-- The rest of your code... -->
+
+        <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
+            <h3 style="color: #fef200;">จองคิว</h3>
+            <h4 style="color: #ffffff;"> วิเคราะห์เจาะลึก Unlock Your Secret</h4>
+        </div>
+
     </div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <img src="line.png" />
+            </div>
+            <!-- The rest of your code... -->
+        </div>
+    </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    let nameInput = document.getElementById('textbox1');
-    let surnameInput = document.getElementById('textbox2');
-    let resultInput = document.getElementById('textbox3');
-    let resultNInput = document.getElementById('textbox11');
-    let resultSInput = document.getElementById('textbox22');
-    let resultCode1 = document.getElementById('code1');
-    let resultCode2 = document.getElementById('code2');
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 
-    let textboxSumSlogan = document.getElementById('textboxSumSlogan');
-    let textboxSloganThai = document.getElementById('textboxSloganThai');
-    let textboxSloganEnglish = document.getElementById('textboxSloganEnglish');
-    let textboxSloganThaiScore = document.getElementById('textboxSloganThaiScore');
-    let textboxSloganEnglishScore = document.getElementById('textboxSloganEnglishScore');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let nameInput = document.getElementById('textbox1');
+            let surnameInput = document.getElementById('textbox2');
+            let resultInput = document.getElementById('textbox3');
+            let resultNInput = document.getElementById('textbox11');
+            let resultSInput = document.getElementById('textbox22');
+            let resultCode1 = document.getElementById('code1');
+            let resultCode2 = document.getElementById('code2');
 
-    let textboxBandSum = document.getElementById('textboxBandSum');
-    let textboxBandThai = document.getElementById('textboxBandThai');
-    let textboxBandEng = document.getElementById('textboxBandEng');
-    let textboxBandThaiScore = document.getElementById('textboxBandThaiScore');
-    let textboxBandEngScore  = document.getElementById('textboxBandEngScore');
+            let textboxSumSlogan = document.getElementById('textboxSumSlogan');
+            let textboxSloganThai = document.getElementById('textboxSloganThai');
+            let textboxSloganEnglish = document.getElementById('textboxSloganEnglish');
+            let textboxSloganThaiScore = document.getElementById('textboxSloganThaiScore');
+            let textboxSloganEnglishScore = document.getElementById('textboxSloganEnglishScore');
 
-    function calculateScore(str) {
-        let score = 0;
-        for(let i = 0; i < str.length; i++) {
-            let char = str[i].toLowerCase(); // Convert character to lowercase
-            if('ดกถภฤทาุำ่aijqy'.includes(char)) {
-                score += 1;
-                console.log(char + " " + 1)
-            }
-            else if('ขชบปงเแู้brk'.includes(char)) {
-                score += 2;
-                console.log(char + " " + 2)
-            }
-            else if('ฃฅฆฒตฑ+cgls'.includes(char)) {
-                score += 3;
-                console.log(char + " " + 3)
-            }
+            let textboxBandSum = document.getElementById('textboxBandSum');
+            let textboxBandThai = document.getElementById('textboxBandThai');
+            let textboxBandEng = document.getElementById('textboxBandEng');
+            let textboxBandThaiScore = document.getElementById('textboxBandThaiScore');
+            let textboxBandEngScore = document.getElementById('textboxBandEngScore');
 
-            else if('คธรญษโะิัdmt'.includes(char)) {
-                score += 4;
-                console.log(char + " " + 4)
-            }
+            function checkScore(score) {
 
-            else if('ฉณฌนมฎหฬฮ฿ehnx'.includes(char)) {
-                score += 5;
-                console.log(char + " " + 5)
-            }
+                const validScores = [1, 2, 4, 5, 6, 9, 14, 15, 19, 23, 24, 32, 36, 40, 41, 42, 44, 45, 46, 50, 51, 54, 55, 56, 59, 60, 63, 64, 65, 79, 89, 90, 91, 95, 99, 100, 104, 105, 109, 114, 115, 119, 123, 124, 126, 132, 136, 140, 141, 142, 144, 145, 146, 150, 151, 154, 155, 156, 159, 160, 163, 164, 165, 179, 189, 190, 191, 195, 197, 198, 199];
 
-            else if('วอจลใuvw'.includes(char)) {
-                score += 6;
-                console.log(char + " " + 6)
+
+                if (validScores.includes(Number(score))) {
+                    return true;
+                    // inputElement.classList.remove('red-border');
+                    // inputElement.classList.add('green-border');
+                } else {
+                    return false;
+                    // inputElement.classList.remove('green-border');
+                    // inputElement.classList.add('red-border');
+                }
             }
 
-            else if('ศีสืซ๊oz'.includes(char)) {
-                score += 7;
-                console.log(char + " " + 7)
-            }
+            function calculateScore(str) {
+                let score = 0;
+                for (let i = 0; i < str.length; i++) {
+                    let char = str[i].toLowerCase(); // Convert character to lowercase
+                    if ('ดกถภฤทาุำ่aijqy'.includes(char)) {
+                        score += 1;
+                        console.log(char + " " + 1)
+                    }
+                    else if ('ขชบปงเแู้brk'.includes(char)) {
+                        score += 2;
+                        console.log(char + " " + 2)
+                    }
+                    else if ('ฃฅฆฒตฑ+cgls'.includes(char)) {
+                        score += 3;
+                        console.log(char + " " + 3)
+                    }
+
+                    else if ('คธรญษโะิัdmt'.includes(char)) {
+                        score += 4;
+                        console.log(char + " " + 4)
+                    }
+
+                    else if ('ฉณฌนมฎหฬฮ฿ehnx'.includes(char)) {
+                        score += 5;
+                        console.log(char + " " + 5)
+                    }
+
+                    else if ('วอจลใuvw'.includes(char)) {
+                        score += 6;
+                        console.log(char + " " + 6)
+                    }
+
+                    else if ('ศีสืซ๊oz'.includes(char)) {
+                        score += 7;
+                        console.log(char + " " + 7)
+                    }
 
 
-            else if('ยพฟผฝ็fp'.includes(char)) {
-                score += 8;
-                console.log(char + " " + 8)
-            }
+                    else if ('ยพฟผฝ็fp'.includes(char)) {
+                        score += 8;
+                        console.log(char + " " + 8)
+                    }
 
-            else if('ฏฐไ์'.includes(char)) {
-                score += 9;
-                console.log(char + " " + 9)
-            }
+                    else if ('ฏฐไ์'.includes(char)) {
+                        score += 9;
+                        console.log(char + " " + 9)
+                    }
 
-            else if(!isNaN(char) && char !== ' ') { // Check if character is a number and not a space
-    score += parseInt(char); // Convert string number to integer and add to score
-}
+                    else if (!isNaN(char) && char !== ' ') { // Check if character is a number and not a space
+                        score += parseInt(char); // Convert string number to integer and add to score
+                    }
 
-            // Continue for other conditions
-        }
-        return score;
-    }
-
-
-    function calculateScoreBlack(str) {
-        let score = 0;
-        for(let i = 0; i < str.length; i++) {
-            let char = str[i].toLowerCase(); // Convert character to lowercase
-            if('อะาิีุูเโ'.includes(char)) {
-                score += 6;
-            }
-            if('กขคฆง'.includes(char)) {
-                score += 15;
-            }
-            if('จฉชซฌญ'.includes(char)) {
-                score += 8;
-            }
-
-            if('ฎฏฐฑฒณ'.includes(char)) {
-                score += 17;
-            }
-
-            if('ดตถทธน'.includes(char)) {
-                score += 10;
-            }
-
-            if('บปผฝพฤภม'.includes(char)) {
-                score += 19;
-            }
-
-            if('ยรลว'.includes(char)) {
-                score += 12;
+                    // Continue for other conditions
+                }
+                return score;
             }
 
 
-            if('ศษสหฬฮ'.includes(char)) {
-                score += 21;
+            function calculateScoreBlack(str) {
+                let score = 0;
+                for (let i = 0; i < str.length; i++) {
+                    let char = str[i].toLowerCase(); // Convert character to lowercase
+                    if ('อะาิีุูเโ'.includes(char)) {
+                        score += 6;
+                    }
+                    if ('กขคฆง'.includes(char)) {
+                        score += 15;
+                    }
+                    if ('จฉชซฌญ'.includes(char)) {
+                        score += 8;
+                    }
+
+                    if ('ฎฏฐฑฒณ'.includes(char)) {
+                        score += 17;
+                    }
+
+                    if ('ดตถทธน'.includes(char)) {
+                        score += 10;
+                    }
+
+                    if ('บปผฝพฤภม'.includes(char)) {
+                        score += 19;
+                    }
+
+                    if ('ยรลว'.includes(char)) {
+                        score += 12;
+                    }
+
+
+                    if ('ศษสหฬฮ'.includes(char)) {
+                        score += 21;
+                    }
+
+
+
+                    if (!isNaN(char) && char !== ' ') { // Check if character is a number and not a space
+                        score += parseInt(char); // Convert string number to integer and add to score
+                    }
+
+                    // Continue for other conditions
+                }
+                return score;
             }
 
-        
+            function reduceToOneDigit(num) {
+                let sum = num;
 
-            if(!isNaN(char) && char !== ' ') { // Check if character is a number and not a space
-    score += parseInt(char); // Convert string number to integer and add to score
-}
+                while (sum > 9) {
+                    sum = sum.toString().split('').reduce((total, digit) => total + parseInt(digit), 0);
+                }
 
-            // Continue for other conditions
-        }
-        return score;
-    }
-
-    function reduceToOneDigit(num) {
-    let sum = num;
-
-    while (sum > 9) {
-        sum = sum.toString().split('').reduce((total, digit) => total + parseInt(digit), 0);
-    }
-
-    return sum;
-}
+                return sum;
+            }
 
 
-    function updateScore() {
+            function updateScore() {
 
-        let totalScoreN =  calculateScore(nameInput.value);
-        let totalScoreS =  calculateScore(surnameInput.value);
-        let totalScore = totalScoreN+ totalScoreS;
-        let totalScoreBlack = calculateScoreBlack(nameInput.value);
-        
-        resultNInput.value = totalScoreN;
-        resultSInput.value = totalScoreS;
-        resultInput.value = totalScore;
-        resultCode2.value = totalScoreBlack;
-    
+                let totalScoreN = calculateScore(nameInput.value);
+                let totalScoreS = calculateScore(surnameInput.value);
+                let totalScore = totalScoreN + totalScoreS;
+                let totalScoreBlack = calculateScoreBlack(nameInput.value);
 
-        resultCode1.value = reduceToOneDigit(totalScoreBlack)
-    }
+                resultNInput.value = totalScoreN;
 
-    function updateScoreBand() {
+                if (checkScore(Number(totalScoreN))) {
+                    resultNInput.classList.remove('red-border');
+                    resultNInput.classList.add('green-border');
+                } else {
+                    resultNInput.classList.remove('green-border');
+                    resultNInput.classList.add('red-border');
+                }
 
-let totalScoreBandThai =  calculateScore(textboxBandThai.value);
-let totalScoreBandEng =   calculateScore(textboxBandEng.value);
-let totalScore = totalScoreBandThai+ totalScoreBandEng;
+                resultSInput.value = totalScoreS;
 
+                if (checkScore(Number(totalScoreS))) {
+                    resultSInput.classList.remove('red-border');
+                    resultSInput.classList.add('green-border');
+                } else {
+                    resultSInput.classList.remove('green-border');
+                    resultSInput.classList.add('red-border');
+                }
+                resultInput.value = totalScore;
 
-textboxBandThaiScore.value = totalScoreBandThai;
-textboxBandEngScore.value = totalScoreBandEng;
-textboxBandSum.value = totalScore;
+                if (checkScore(Number(totalScore))) {
+                    resultInput.classList.remove('red-border');
+                    resultInput.classList.add('green-border');
+                } else {
+                    resultInput.classList.remove('green-border');
+                    resultInput.classList.add('red-border');
+                }
 
-}
-
-function updateScoreSlogan() {
-
-let totalScoreSloganThai =  calculateScore(textboxSloganThai.value);
-let totalScoreSloganEng =  calculateScore(textboxSloganEnglish.value);
-let totalScore = totalScoreSloganThai+ totalScoreSloganEng;
-
-
-textboxSloganThaiScore.value = totalScoreSloganThai;
-textboxSloganEnglishScore.value = totalScoreSloganEng;
-textboxSumSlogan.value = totalScore;
-
-}
+                resultCode2.value = totalScoreBlack;
 
 
+                resultCode1.value = reduceToOneDigit(totalScoreBlack)
+            }
+
+            function updateScoreBand() {
+
+                let totalScoreBandThai = calculateScore(textboxBandThai.value);
+                let totalScoreBandEng = calculateScore(textboxBandEng.value);
+                let totalScore = totalScoreBandThai + totalScoreBandEng;
+
+
+                textboxBandThaiScore.value = totalScoreBandThai;
+                textboxBandEngScore.value = totalScoreBandEng;
+                textboxBandSum.value = totalScore;
+
+                if (checkScore(Number(totalScoreBandThai))) {
+                    textboxBandThaiScore.classList.remove('red-border');
+                    textboxBandThaiScore.classList.add('green-border');
+                } else {
+                    textboxBandThaiScore.classList.remove('green-border');
+                    textboxBandThaiScore.classList.add('red-border');
+                }
+
+
+                if (checkScore(Number(totalScoreBandEng))) {
+                    textboxBandEngScore.classList.remove('red-border');
+                    textboxBandEngScore.classList.add('green-border');
+                } else {
+                    textboxBandEngScore.classList.remove('green-border');
+                    textboxBandEngScore.classList.add('red-border');
+                }
+
+                if (checkScore(Number(totalScore))) {
+                    textboxBandSum.classList.remove('red-border');
+                    textboxBandSum.classList.add('green-border');
+                } else {
+                    textboxBandSum.classList.remove('green-border');
+                    textboxBandSum.classList.add('red-border');
+                }
+
+            }
+
+            function updateScoreSlogan() {
+
+                let totalScoreSloganThai = calculateScore(textboxSloganThai.value);
+                let totalScoreSloganEng = calculateScore(textboxSloganEnglish.value);
+                let totalScore = totalScoreSloganThai + totalScoreSloganEng;
+
+
+                textboxSloganThaiScore.value = totalScoreSloganThai;
+                textboxSloganEnglishScore.value = totalScoreSloganEng;
+                textboxSumSlogan.value = totalScore;
+
+                if (checkScore(Number(totalScoreSloganThai))) {
+                    textboxSloganThaiScore.classList.remove('red-border');
+                    textboxSloganThaiScore.classList.add('green-border');
+                } else {
+                    textboxSloganThaiScore.classList.remove('green-border');
+                    textboxSloganThaiScore.classList.add('red-border');
+                }
+
+
+                if (checkScore(Number(totalScoreSloganEng))) {
+                    textboxSloganEnglishScore.classList.remove('red-border');
+                    textboxSloganEnglishScore.classList.add('green-border');
+                } else {
+                    textboxSloganEnglishScore.classList.remove('green-border');
+                    textboxSloganEnglishScore.classList.add('red-border');
+                }
+
+
+
+                if (checkScore(Number(totalScore))) {
+                    textboxSumSlogan.classList.remove('red-border');
+                    textboxSumSlogan.classList.add('green-border');
+                } else {
+                    textboxSumSlogan.classList.remove('green-border');
+                    textboxSumSlogan.classList.add('red-border');
+                }
+
+
+            }
 
 
 
 
 
-    nameInput.addEventListener('input', updateScore);
-    surnameInput.addEventListener('input', updateScore);
-
-    textboxBandThai.addEventListener('input', updateScoreBand);
-    textboxBandEng.addEventListener('input', updateScoreBand);
 
 
-    textboxSloganThai.addEventListener('input', updateScoreSlogan);
-    textboxSloganEnglish.addEventListener('input', updateScoreSlogan);
+            nameInput.addEventListener('input', updateScore);
+            surnameInput.addEventListener('input', updateScore);
+
+            textboxBandThai.addEventListener('input', updateScoreBand);
+            textboxBandEng.addEventListener('input', updateScoreBand);
 
 
-});
-</script>
+            textboxSloganThai.addEventListener('input', updateScoreSlogan);
+            textboxSloganEnglish.addEventListener('input', updateScoreSlogan);
+
+
+        });
+    </script>
 </body>
+
 </html>
