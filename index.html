@@ -132,6 +132,18 @@
                 </div>
             </div>
 
+            <!-- Code div -->
+            <div class="col-lg-3" id="codediv">
+                <div class="mb-3">
+                    <label for="code1Band" class="form-label">รหัส1</label>
+                    <input type="text" id="code1Band" class="form-control" placeholder="คะแนน">
+                </div>
+                <div>
+                    <label for="code2Band" class="form-label">รหัส2</label>
+                    <input type="text" id="code2Band" class="form-control" placeholder="คะแนน">
+                </div>
+            </div>
+
         </div>
 
         <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
@@ -170,6 +182,8 @@
                         <input type="text" id="textboxSloganEnglishScore" class="form-control"
                             placeholder="คะแนนสโลแกนภาษาอังกฤษ">
                     </div>
+
+
                 </div>
 
                 <div class="row mt-3 mb-3">
@@ -179,6 +193,18 @@
                     <div class="col-4">
                         <input type="text" id="textboxSumSlogan" class="form-control" placeholder="ผลรวมคะแนนสโลแกน">
                     </div>
+                </div>
+            </div>
+
+            <!-- Code div -->
+            <div class="col-lg-3" id="codediv">
+                <div class="mb-3">
+                    <label for="code1Slogan" class="form-label">รหัส1</label>
+                    <input type="text" id="code1Slogan" class="form-control" placeholder="คะแนน">
+                </div>
+                <div>
+                    <label for="code2Slogan" class="form-label">รหัส2</label>
+                    <input type="text" id="code2Slogan" class="form-control" placeholder="คะแนน">
                 </div>
             </div>
 
@@ -194,7 +220,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 text-center mb-4">
-                <img src="line.png" />
+                <a href="https://lin.ee/cOdve8Q"><img src="line.png" /></a>
             </div>
             <!-- The rest of your code... -->
         </div>
@@ -221,11 +247,18 @@
             let textboxSloganThaiScore = document.getElementById('textboxSloganThaiScore');
             let textboxSloganEnglishScore = document.getElementById('textboxSloganEnglishScore');
 
+            let resultCode1Slogan = document.getElementById('code1Slogan');
+            let resultCode2Slogan = document.getElementById('code2Slogan');
+
             let textboxBandSum = document.getElementById('textboxBandSum');
             let textboxBandThai = document.getElementById('textboxBandThai');
             let textboxBandEng = document.getElementById('textboxBandEng');
             let textboxBandThaiScore = document.getElementById('textboxBandThaiScore');
             let textboxBandEngScore = document.getElementById('textboxBandEngScore');
+
+
+            let resultCode1Band = document.getElementById('code1Band');
+            let resultCode2Band = document.getElementById('code2Band');
 
             function checkScore(score) {
 
@@ -394,10 +427,28 @@
                     resultInput.classList.add('red-border');
                 }
 
+
+
                 resultCode2.value = totalScoreBlack;
 
+                if (checkScore(Number(totalScoreBlack))) {
+                    resultCode2.classList.remove('red-border');
+                    resultCode2.classList.add('green-border');
+                } else {
+                    resultCode2.classList.remove('green-border');
+                    resultCode2.classList.add('red-border');
+                }
 
-                resultCode1.value = reduceToOneDigit(totalScoreBlack)
+                var totalScoreBlackD = reduceToOneDigit(totalScoreBlack);
+                resultCode1.value = totalScoreBlackD;
+
+                if (checkScore(Number(totalScoreBlackD))) {
+                    resultCode1.classList.remove('red-border');
+                    resultCode1.classList.add('green-border');
+                } else {
+                    resultCode1.classList.remove('green-border');
+                    resultCode1.classList.add('red-border');
+                }
             }
 
             function updateScoreBand() {
@@ -435,6 +486,30 @@
                     textboxBandSum.classList.remove('green-border');
                     textboxBandSum.classList.add('red-border');
                 }
+
+
+
+                let totalScoreBlackBand = calculateScoreBlack(textboxBandThai.value);
+                if (checkScore(Number(totalScoreBlackBand))) {
+                    resultCode2Band.classList.remove('red-border');
+                    resultCode2Band.classList.add('green-border');
+                } else {
+                    resultCode2Band.classList.remove('green-border');
+                    resultCode2Band.classList.add('red-border');
+                }
+                resultCode2Band.value = totalScoreBlackBand;
+
+                var totalScoreBlackDBand = reduceToOneDigit(totalScoreBlackBand);
+                resultCode1Band.value = totalScoreBlackDBand;
+
+                if (checkScore(Number(totalScoreBlackDBand))) {
+                    resultCode1Band.classList.remove('red-border');
+                    resultCode1Band.classList.add('green-border');
+                } else {
+                    resultCode1Band.classList.remove('green-border');
+                    resultCode1Band.classList.add('red-border');
+                }
+
 
             }
 
@@ -475,6 +550,30 @@
                     textboxSumSlogan.classList.remove('green-border');
                     textboxSumSlogan.classList.add('red-border');
                 }
+
+
+                let totalScoreBlackSlogan = calculateScoreBlack(textboxSloganThai.value);
+                if (checkScore(Number(totalScoreBlackSlogan))) {
+                    resultCode2Slogan.classList.remove('red-border');
+                    resultCode2Band.classList.add('green-border');
+                } else {
+                    resultCode2Slogan.classList.remove('green-border');
+                    resultCode2Slogan.classList.add('red-border');
+                }
+
+                resultCode2Slogan.value = totalScoreBlackSlogan;
+
+                var totalScoreBlackDSlogan = reduceToOneDigit(totalScoreBlackSlogan);
+                resultCode1Slogan.value = totalScoreBlackDSlogan;
+
+                if (checkScore(Number(totalScoreBlackDSlogan))) {
+                    resultCode1Slogan.classList.remove('red-border');
+                    resultCode1Slogan.classList.add('green-border');
+                } else {
+                    resultCode1Slogan.classList.remove('green-border');
+                    resultCode1Slogan.classList.add('red-border');
+                }
+
 
 
             }
