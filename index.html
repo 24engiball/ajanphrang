@@ -15,6 +15,13 @@
         .red-border {
             border: 3px solid red;
         }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
     </style>
 
 </head>
@@ -30,9 +37,50 @@
     </div>
 
     <div class="container mt-5">
+        <!-- <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
+            <h3 style="color: #fef200;">จองคิว</h3>
+            <h4 style="color: #ffffff;"> เลขศาสตร์ดีอย่างเดียวไม่เพียงพอ การจัดเรื่องตัวอักษรคือการกำหนดเรื่องราวให้เกิดขึ้นตามเป้าหมาย</h4>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <a href="https://lin.ee/cOdve8Q"><img src="line.png" /></a>
+                </div>
+        
+            </div>
+        </div> -->
+
         <div class="row bg-dark mt-3 mb-3 text-center pt-3 pb-3">
             <h3 classs="center" style="color: #fef200;">UNLOCK YOU SECRET</h3>
             <h4 style="color: #ffffff;">Personal</h4>
+        </div>
+        <div class="row mt-3 mb-3 ">
+            <div class="col-12 ">
+                <form>
+                    <div class="form-row"> <!-- ใช้ form-row เพื่อจัดการ input ในบรรทัดเดียวกัน -->
+                        <div class="form-group col-3">
+                            <label for="birthday">เลือกวันเกิด:</label>
+                            <select class="form-control" id="birthday" name="birthday">
+                                <option value="0" selected>วันอาทิตย์</option>
+                                <option value="1">วันจันทร์</option>
+                                <option value="2">วันอังคาร</option>
+                                <option value="3">วันพุธ(กลางวัน)</option>
+                                <option value="4">วันพุธ(กลางคีน)</option>
+                                <option value="5">วันพฤหัสบดี</option>
+                                <option value="6">วันศุกร์</option>
+                                <option value="7">วันเสาร์</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="gender">เลือกเพศ:</label>
+                            <select class="form-control" id="gender" name="gender">
+                                <option value="0" selected>ชาย</option>
+                                <option value="1">หญิง</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="row mt-3">
             <!-- Main Content -->
@@ -225,6 +273,8 @@
             <!-- The rest of your code... -->
         </div>
     </div>
+    <a href="https://lin.ee/cOdve8Q" class="floating-button"><img src="line2.png" /></a>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -240,6 +290,9 @@
             let resultSInput = document.getElementById('textbox22');
             let resultCode1 = document.getElementById('code1');
             let resultCode2 = document.getElementById('code2');
+
+            let ggender = document.getElementById('gender');
+            let bbirthday = document.getElementById('birthday');
 
             let textboxSumSlogan = document.getElementById('textboxSumSlogan');
             let textboxSloganThai = document.getElementById('textboxSloganThai');
@@ -390,6 +443,58 @@
                 return sum;
             }
 
+            function calculateGoodNameByDay(str, bday) {
+                console.log("birthday");
+                console.log(bday);
+
+                for (let i = 0; i < str.length; i++) {
+                    let char = str[i].toLowerCase(); // Convert character to lowercase
+                    if ('ศษสหฬฮ'.includes(char) && bday == 0) {
+                        return false;
+                    }
+
+                    if ('ะาิอีโำึอึอืไ'.includes(char) && bday == 1) {
+                        return false;
+                    }
+
+                    if ('กขคฆง'.includes(char) && bday == 2) {
+                        return false;
+                    }
+                    if ('จฉชซฌญ'.includes(char) && bday == 3) {
+                        return false;
+                    }
+
+                    if ('บปผฝพฟภม'.includes(char) && bday == 4) {
+                        return false;
+                    }
+
+                    if ('ดตถทธน'.includes(char) && bday == 5) {
+                        return false;
+                    }
+                    if ('ยรลว'.includes(char) && bday == 6) {
+                        return false;
+                    }
+                    if ('ฎฏฐฑฒณ'.includes(char) && bday == 7) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            function calculateGoodNameByGender(nscore, bgender) {
+
+                if (bgender = 0 && (nscore == 23 || nscore == 32)) {
+                    return false;
+                }
+
+                if (bgender = 1 && (nscore == 19 || nscore == 91)) {
+                    return false;
+                }
+
+                return true;
+
+            }
+
 
             function updateScore() {
 
@@ -400,13 +505,15 @@
 
                 resultNInput.value = totalScoreN;
 
-                if (checkScore(Number(totalScoreN))) {
+                if (checkScore(Number(totalScoreN))  && calculateGoodNameByDay(Number(totalScoreN),bbirthday.value)  &&  calculateGoodNameByGender(Number(totalScoreN),ggender.value)) {
                     resultNInput.classList.remove('red-border');
                     resultNInput.classList.add('green-border');
                 } else {
                     resultNInput.classList.remove('green-border');
                     resultNInput.classList.add('red-border');
                 }
+
+
 
                 resultSInput.value = totalScoreS;
 
