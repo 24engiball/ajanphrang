@@ -517,7 +517,7 @@
 
                 resultSInput.value = totalScoreS;
 
-                if (checkScore(Number(totalScoreS)) && calculateGoodNameByDay(surnameInput.value,bbirthday.value) ) {
+                if (checkScore(Number(totalScoreS)) && calculateGoodNameByDay(surnameInput.value,bbirthday.value) &&  calculateGoodNameByGender(Number(totalScoreS),ggender.value) ) {
                     resultSInput.classList.remove('red-border');
                     resultSInput.classList.add('green-border');
                 } else {
