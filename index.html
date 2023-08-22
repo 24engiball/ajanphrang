@@ -505,7 +505,7 @@
 
                 resultNInput.value = totalScoreN;
 
-                if (checkScore(Number(totalScoreN))  && calculateGoodNameByDay(Number(totalScoreN),bbirthday.value)  &&  calculateGoodNameByGender(Number(totalScoreN),ggender.value)) {
+                if (checkScore(Number(totalScoreN))  && calculateGoodNameByDay(nameInput.value,bbirthday.value)  &&  calculateGoodNameByGender(Number(totalScoreN),ggender.value)) {
                     resultNInput.classList.remove('red-border');
                     resultNInput.classList.add('green-border');
                 } else {
@@ -517,7 +517,7 @@
 
                 resultSInput.value = totalScoreS;
 
-                if (checkScore(Number(totalScoreS))) {
+                if (checkScore(Number(totalScoreS)) && calculateGoodNameByDay(surnameInput.value,bbirthday.value) ) {
                     resultSInput.classList.remove('red-border');
                     resultSInput.classList.add('green-border');
                 } else {
