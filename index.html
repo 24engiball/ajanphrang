@@ -513,6 +513,15 @@
                     resultNInput.classList.add('red-border');
                 }
 
+                if ( calculateGoodNameByDay(nameInput.value,bbirthday.value)  ) {
+                    nameInput.classList.remove('red-border');
+                    nameInput.classList.add('green-border');
+                } else {
+                    nameInput.classList.remove('green-border');
+                    nameInput.classList.add('red-border');
+                }
+
+
 
 
                 resultSInput.value = totalScoreS;
@@ -524,6 +533,16 @@
                     resultSInput.classList.remove('green-border');
                     resultSInput.classList.add('red-border');
                 }
+
+                if ( calculateGoodNameByDay(surnameInput.value,bbirthday.value) ) {
+                    surnameInput.classList.remove('red-border');
+                    surnameInput.classList.add('green-border');
+                } else {
+                    surnameInput.classList.remove('green-border');
+                    surnameInput.classList.add('red-border');
+                }
+
+
                 resultInput.value = totalScore;
 
                 if (checkScore(Number(totalScore))) {
