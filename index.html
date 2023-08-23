@@ -483,11 +483,17 @@
 
             function calculateGoodNameByGender(nscore, bgender) {
 
-                if (bgender = 0 && (nscore == 23 || nscore == 32)) {
+                console.log("check g");
+                console.log(nscore);
+        
+                console.log(bgender);
+               
+
+                if (bgender == 0 && (nscore == 23 || nscore == 32)) {
                     return false;
                 }
 
-                if (bgender = 1 && (nscore == 19 || nscore == 91)) {
+                if (bgender == 1 && (nscore == 19 || nscore == 91)) {
                     return false;
                 }
 
@@ -505,7 +511,7 @@
 
                 resultNInput.value = totalScoreN;
 
-                if (checkScore(Number(totalScoreN))  && calculateGoodNameByDay(nameInput.value,bbirthday.value)  &&  calculateGoodNameByGender(Number(totalScoreN),ggender.value)) {
+                if (checkScore(Number(totalScoreN))  && calculateGoodNameByDay(nameInput.value,bbirthday.value)  ) {
                     resultNInput.classList.remove('red-border');
                     resultNInput.classList.add('green-border');
                 } else {
@@ -526,7 +532,7 @@
 
                 resultSInput.value = totalScoreS;
 
-                if (checkScore(Number(totalScoreS)) && calculateGoodNameByDay(surnameInput.value,bbirthday.value) &&  calculateGoodNameByGender(Number(totalScoreS),ggender.value) ) {
+                if (checkScore(Number(totalScoreS)) && calculateGoodNameByDay(surnameInput.value,bbirthday.value)  ) {
                     resultSInput.classList.remove('red-border');
                     resultSInput.classList.add('green-border');
                 } else {
@@ -542,6 +548,16 @@
                     surnameInput.classList.add('red-border');
                 }
 
+
+
+
+                if ( calculateGoodNameByGender(Number(totalScoreN),Number( ggender.value)) ) {
+                    ggender.classList.remove('red-border');
+                    ggender.classList.add('green-border');
+                } else {
+                    ggender.classList.remove('green-border');
+                    ggender.classList.add('red-border');
+                }
 
                 resultInput.value = totalScore;
 
