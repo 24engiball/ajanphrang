@@ -389,37 +389,46 @@
 
             function calculateScoreBlack(str) {
                 let score = 0;
+                console.log("cal black ");
                 for (let i = 0; i < str.length; i++) {
                     let char = str[i].toLowerCase(); // Convert character to lowercase
-                    if ('อ๋ะาิีุูเโ่้ํ์'.includes(char)) {
+                    if ('อะาิีุูเแโอ่อ้อ๋อ็อ์'.includes(char)) {
                         score += 6;
+                        console.log(char + " " + 6);
                     }
                     if ('กขคฆง'.includes(char)) {
                         score += 15;
+                        console.log(char + " " + 15);
                     }
                     if ('จฉชซฌญ'.includes(char)) {
                         score += 8;
+                        console.log(char + " " + 8);
                     }
 
                     if ('ฎฏฐฑฒณ'.includes(char)) {
                         score += 17;
+                        console.log(char + " " + 17);
                     }
 
                     if ('ดตถทธน'.includes(char)) {
                         score += 10;
+                        console.log(char + " " + 10);
                     }
 
                     if ('บปผฝพฤภม'.includes(char)) {
                         score += 19;
+                        console.log(char + " " + 19);
                     }
 
                     if ('ยรลว'.includes(char)) {
                         score += 12;
+                        console.log(char + " " + 12);
                     }
 
 
                     if ('ศษสหฬฮ'.includes(char)) {
                         score += 21;
+                        console.log(char + " " + 21)
                     }
 
 
