@@ -609,7 +609,7 @@ if (validScores.includes(Number(score))) {
                 var totalScoreBlackD = reduceToOneDigit(totalScoreBlack);
                 resultCode1.value = totalScoreBlackD;
 
-                if (checkScore(Number(totalScoreBlackD))) {
+                if (checkScoreB(Number(totalScoreBlackD))) {
                     resultCode1.classList.remove('red-border');
                     resultCode1.classList.add('green-border');
                 } else {
