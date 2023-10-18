@@ -16,6 +16,11 @@
             border: 3px solid red;
         }
 
+        .yellow-border {
+            border: 3px solid yellow;
+        }
+
+
         .floating-button {
             position: fixed;
             bottom: 20px;
@@ -601,7 +606,12 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreBlack))) {
                     resultCode2.classList.remove('red-border');
                     resultCode2.classList.add('green-border');
-                } else {
+                }      
+                 else if(Number(totalScoreBlack) == 97){
+                    resultCode2.classList.remove('red-border');
+                    resultCode2.classList.remove('green-border');
+                    resultCode2.classList.add('yellow-border');
+                }else {
                     resultCode2.classList.remove('green-border');
                     resultCode2.classList.add('red-border');
                 }
@@ -612,7 +622,13 @@ if (validScores.includes(Number(score))) {
                 if (checkScoreB(Number(totalScoreBlackD))) {
                     resultCode1.classList.remove('red-border');
                     resultCode1.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreBlackD) == 7){
+                    resultCode1.classList.remove('red-border');
+                    resultCode1.classList.remove('green-border');
+                    resultCode1.classList.add('yellow-border');
+                }
+                else {
                     resultCode1.classList.remove('green-border');
                     resultCode1.classList.add('red-border');
                 }
