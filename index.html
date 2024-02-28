@@ -285,7 +285,7 @@
                 <div class="col-12 text-center mb-4">
                     <form id="dateForm">
                         <div class="mb-3">
-                            <input type="number" id="HR" name="HR" class="form-control" placeholder="เลขชั่วโมง" required>
+                            <input type="text" id="HR" name="HR" class="form-control" placeholder="เลขชั่วโมง" required>
                         </div>
                         <div class="mb-3">
                             <input type="number" id="DD" name="DD" class="form-control" placeholder="วันที่" required>
@@ -849,11 +849,51 @@ if (validScores.includes(Number(score))) {
 
     // สร้าง URL จากตัวแปรที่รับ
     var HR = $('#HR').val();
+    var HRInteger =0;
+    if(HR<1){
+        HRInteger =0;
+    }
+    else if(HR>=1 && HR<3){
+        HRInteger =2;
+    }
+    else if(HR>=3 && HR<5){
+        HRInteger =4;
+    }
+    else if(HR>=5 && HR<7){
+        HRInteger =6;
+    }
+    else if(HR>=7 && HR<9){
+        HRInteger =8;
+    }
+    else if(HR>=9 && HR<11){
+        HRInteger =10;
+    }
+    else if(HR>=11 && HR<13){
+        HRInteger =12;
+    }
+    else if(HR>=13 && HR<15){
+        HRInteger =14;
+    }
+    else if(HR>=15 && HR<17){
+        HRInteger =16;
+    }
+    else if(HR>=17 && HR<19){
+        HRInteger =18;
+    }
+    else if(HR>=19 && HR<21){
+        HRInteger =20;
+    }
+    else if(HR>=21 && HR<23){
+        HRInteger =22;
+    }else{
+        HRInteger =23;
+    }
+
     var DD = $('#DD').val();
     var MM = $('#MM').val();
     var YY = $('#YY').val();
     var apiUrl = "https://corsproxy.io/?https://www.fourpillars.net/chindate_4p_th.php";
-    var queryString = `?HR=${HR}&DD=${DD}&MM=${MM}&YY=${YY}&stage=r`;
+    var queryString = `?HR=${HRInteger}&DD=${DD}&MM=${MM}&YY=${YY}&stage=r`;
 
     // ส่งข้อมูลไปยัง cors-anywhere และรับผลลัพธ์
     $.ajax({
