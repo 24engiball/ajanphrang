@@ -921,8 +921,7 @@ if (validScores.includes(Number(score))) {
     x.open(options.method, cors_api_url + options.url);
     x.onload = x.onerror = function() {
       printResult(
-        options.method + ' ' + options.url + '\n' +
-        x.status + ' ' + x.statusText + '\n\n' +
+  
         (x.responseText || '')
       );
     };
