@@ -983,12 +983,12 @@ if (validScores.includes(Number(score))) {
         var YY = $('#YY').val();
         var apiUrl = "https://www.fourpillars.net/chindate_4p_th.php";
         var queryString = `HR=${HRInteger}&DD=${DD}&MM=${MM}&YY=${YY}&stage=r`;
-   
+        var newUrl =apiUrl +"/?" +queryString; 
         // ส่งข้อมูลไปยัง cors-anywhere และรับผลลัพธ์
 
         doCORSRequest({
         method: 'GET',
-        url: apiUrl,
+        url: newUrl,
         data: queryString
       }, function printResult(result) {
         $("#popupContent").html(result);
