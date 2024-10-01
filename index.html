@@ -653,11 +653,13 @@ if (validScores.includes(Number(score))) {
                     resultCode2.classList.remove('yellow-border');
                     resultCode2.classList.add('green-border');
                 }      
-                 else if(Number(totalScoreBlack) == 97){
+                 else if(Number(totalScoreBlack) == 97 || Number(totalScoreBlack) == 7){
                     resultCode2.classList.remove('red-border');
                     resultCode2.classList.remove('green-border');
                     resultCode2.classList.add('yellow-border');
-                }else {
+                }
+                
+                else {
                     resultCode2.classList.remove('green-border');
                     resultCode2.classList.remove('yellow-border');
                     resultCode2.classList.add('red-border');
@@ -672,7 +674,7 @@ if (validScores.includes(Number(score))) {
                     resultCode1.classList.add('green-border');
                     
                 } 
-                else if(Number(totalScoreBlackD) == 7){
+                else if(Number(totalScoreBlackD) == 7 || Number(totalScoreBlackD) == 97){
                     resultCode1.classList.remove('red-border');
                     resultCode1.classList.remove('green-border');
                     resultCode1.classList.add('yellow-border');
@@ -698,7 +700,16 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreBandThai))) {
                     textboxBandThaiScore.classList.remove('red-border');
                     textboxBandThaiScore.classList.add('green-border');
-                } else {
+                }
+
+                else if(Number(totalScoreBandThai) == 97 || Number(totalScoreBandThai) == 7){
+                    textboxBandThaiScore.classList.remove('red-border');
+                    textboxBandThaiScore.classList.remove('green-border');
+                    textboxBandThaiScore.classList.add('yellow-border');
+                }
+                
+                
+                else {
                     textboxBandThaiScore.classList.remove('green-border');
                     textboxBandThaiScore.classList.add('red-border');
                 }
@@ -707,7 +718,16 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreBandEng))) {
                     textboxBandEngScore.classList.remove('red-border');
                     textboxBandEngScore.classList.add('green-border');
-                } else {
+                } 
+                
+                else if(Number(totalScoreBandEng) == 97 || Number(totalScoreBandEng) == 7){
+                    textboxBandEngScore.classList.remove('red-border');
+                    textboxBandEngScore.classList.remove('green-border');
+                    textboxBandEngScore.classList.add('yellow-border');
+                }
+                
+                
+                else {
                     textboxBandEngScore.classList.remove('green-border');
                     textboxBandEngScore.classList.add('red-border');
                 }
@@ -715,7 +735,13 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScore))) {
                     textboxBandSum.classList.remove('red-border');
                     textboxBandSum.classList.add('green-border');
-                } else {
+                }
+                else if(Number(totalScore) == 97 || Number(totalScore) == 7){
+                    textboxBandSum.classList.remove('red-border');
+                    textboxBandSum.classList.remove('green-border');
+                    textboxBandSum.classList.add('yellow-border');
+                }
+                else {
                     textboxBandSum.classList.remove('green-border');
                     textboxBandSum.classList.add('red-border');
                 }
@@ -726,7 +752,14 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreBlackBand))) {
                     resultCode2Band.classList.remove('red-border');
                     resultCode2Band.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreBlackBand) == 97 || Number(totalScoreBlackBand) == 7){
+                    resultCode2Band.classList.remove('red-border');
+                    resultCode2Band.classList.remove('green-border');
+                    resultCode2Band.classList.add('yellow-border');
+                }
+                
+                else {
                     resultCode2Band.classList.remove('green-border');
                     resultCode2Band.classList.add('red-border');
                 }
@@ -738,7 +771,13 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreBlackDBand))) {
                     resultCode1Band.classList.remove('red-border');
                     resultCode1Band.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreBlackDBand) == 97 || Number(totalScoreBlackDBand) == 7){
+                    resultCode1Band.classList.remove('red-border');
+                    resultCode1Band.classList.remove('green-border');
+                    resultCode1Band.classList.add('yellow-border');
+                }
+                else {
                     resultCode1Band.classList.remove('green-border');
                     resultCode1Band.classList.add('red-border');
                 }
@@ -760,7 +799,13 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreSloganThai))) {
                     textboxSloganThaiScore.classList.remove('red-border');
                     textboxSloganThaiScore.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreSloganThai) == 97 || Number(totalScoreSloganThai) == 7){
+                    totalScoreSloganThai.classList.remove('red-border');
+                    totalScoreSloganThai.classList.remove('green-border');
+                    totalScoreSloganThai.classList.add('yellow-border');
+                }
+                else {
                     textboxSloganThaiScore.classList.remove('green-border');
                     textboxSloganThaiScore.classList.add('red-border');
                 }
@@ -769,7 +814,13 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreSloganEng))) {
                     textboxSloganEnglishScore.classList.remove('red-border');
                     textboxSloganEnglishScore.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreSloganEng) == 97 || Number(totalScoreSloganEng) == 7){
+                    textboxSloganEnglishScore.classList.remove('red-border');
+                    textboxSloganEnglishScore.classList.remove('green-border');
+                    textboxSloganEnglishScore.classList.add('yellow-border');
+                }
+                else {
                     textboxSloganEnglishScore.classList.remove('green-border');
                     textboxSloganEnglishScore.classList.add('red-border');
                 }
@@ -779,7 +830,15 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScore))) {
                     textboxSumSlogan.classList.remove('red-border');
                     textboxSumSlogan.classList.add('green-border');
-                } else {
+                } 
+                
+                else if(Number(totalScore) == 97 || Number(totalScore) == 7){
+                    textboxSumSlogan.classList.remove('red-border');
+                    textboxSumSlogan.classList.remove('green-border');
+                    textboxSumSlogan.classList.add('yellow-border');
+                }
+
+                else {
                     textboxSumSlogan.classList.remove('green-border');
                     textboxSumSlogan.classList.add('red-border');
                 }
@@ -788,8 +847,16 @@ if (validScores.includes(Number(score))) {
                 let totalScoreBlackSlogan = calculateScoreBlack(textboxSloganThai.value);
                 if (checkScore(Number(totalScoreBlackSlogan))) {
                     resultCode2Slogan.classList.remove('red-border');
-                    resultCode2Band.classList.add('green-border');
-                } else {
+                    resultCode2Slogan.classList.add('green-border');
+                } 
+                else if(Number(totalScoreBlackSlogan) == 97 || Number(totalScoreBlackSlogan) == 7){
+                    resultCode2Slogan.classList.remove('red-border');
+                    resultCode2Slogan.classList.remove('green-border');
+                    resultCode2Slogan.classList.add('yellow-border');
+                }
+
+                
+                else {
                     resultCode2Slogan.classList.remove('green-border');
                     resultCode2Slogan.classList.add('red-border');
                 }
@@ -802,13 +869,16 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreBlackDSlogan))) {
                     resultCode1Slogan.classList.remove('red-border');
                     resultCode1Slogan.classList.add('green-border');
-                } else {
+                }
+                else if(Number(totalScoreBlackDSlogan) == 97 || Number(totalScoreBlackDSlogan) == 7){
+                    resultCode1Slogan.classList.remove('red-border');
+                    resultCode1Slogan.classList.remove('green-border');
+                    resultCode1Slogan.classList.add('yellow-border');
+                }
+                else {
                     resultCode1Slogan.classList.remove('green-border');
                     resultCode1Slogan.classList.add('red-border');
                 }
-
-
-
             }
 
 
