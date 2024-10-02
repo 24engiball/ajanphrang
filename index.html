@@ -589,7 +589,15 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreN))   ) {
                     resultNInput.classList.remove('red-border');
                     resultNInput.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreN) == 97 || Number(totalScoreN) == 7 || Number(totalScoreN) == 79){
+                    resultNInput.classList.remove('red-border');
+                    resultNInput.classList.remove('green-border');
+                    resultNInput.classList.add('yellow-border');
+                }
+                
+                
+                else {
                     resultNInput.classList.remove('green-border');
                     resultNInput.classList.add('red-border');
                 }
@@ -610,7 +618,14 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScoreS))  ) {
                     resultSInput.classList.remove('red-border');
                     resultSInput.classList.add('green-border');
-                } else {
+                } 
+                else if(Number(totalScoreS) == 97 || Number(totalScoreS) == 7 || Number(totalScoreS) == 79){
+                    resultSInput.classList.remove('red-border');
+                    resultSInput.classList.remove('green-border');
+                    resultSInput.classList.add('yellow-border');
+                }
+                
+                else {
                     resultSInput.classList.remove('green-border');
                     resultSInput.classList.add('red-border');
                 }
@@ -639,7 +654,15 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScore))) {
                     resultInput.classList.remove('red-border');
                     resultInput.classList.add('green-border');
-                } else {
+                }
+                else if(Number(totalScore) == 97 || Number(totalScore) == 7 || Number(totalScore) == 79){
+                    resultInput.classList.remove('red-border');
+                    resultInput.classList.remove('green-border');
+                    resultInput.classList.add('yellow-border');
+                }
+                
+                
+                else {
                     resultInput.classList.remove('green-border');
                     resultInput.classList.add('red-border');
                 }
@@ -652,7 +675,7 @@ if (validScores.includes(Number(score))) {
                     resultCode2.classList.remove('yellow-border');
                     resultCode2.classList.add('green-border');
                 }      
-                 else if(Number(totalScoreBlack) == 97 || Number(totalScoreBlack) == 7){
+                 else if(Number(totalScoreBlack) == 97 || Number(totalScoreBlack) == 7 || Number(totalScoreBlack) == 79){
                     resultCode2.classList.remove('red-border');
                     resultCode2.classList.remove('green-border');
                     resultCode2.classList.add('yellow-border');
@@ -673,7 +696,7 @@ if (validScores.includes(Number(score))) {
                     resultCode1.classList.add('green-border');
                     
                 } 
-                else if(Number(totalScoreBlackD) == 7 || Number(totalScoreBlackD) == 97){
+                else if(Number(totalScoreBlackD) == 7 || Number(totalScoreBlackD) == 97 || Number(totalScoreBlackD) == 79){
                     resultCode1.classList.remove('red-border');
                     resultCode1.classList.remove('green-border');
                     resultCode1.classList.add('yellow-border');
@@ -700,6 +723,11 @@ if (validScores.includes(Number(score))) {
                     textboxBandThaiScore.classList.remove('red-border');
                     textboxBandThaiScore.classList.add('green-border');
                 }
+                else if(Number(totalScoreBandThai) == 97 || Number(totalScoreBandThai) == 7 || Number(totalScoreBandThai) == 79){
+                    textboxBandThaiScore.classList.remove('red-border');
+                    textboxBandThaiScore.classList.remove('green-border');
+                    textboxBandThaiScore.classList.add('yellow-border');
+                }
                 
                 else {
                     textboxBandThaiScore.classList.remove('green-border');
@@ -711,6 +739,11 @@ if (validScores.includes(Number(score))) {
                     textboxBandEngScore.classList.remove('red-border');
                     textboxBandEngScore.classList.add('green-border');
                 } 
+                else if(Number(totalScoreBandEng) == 97 || Number(totalScoreBandEng) == 7 || Number(totalScoreBandEng) == 79){
+                    textboxBandEngScore.classList.remove('red-border');
+                    textboxBandEngScore.classList.remove('green-border');
+                    textboxBandEngScore.classList.add('yellow-border');
+                }
                 
                 else {
                     textboxBandEngScore.classList.remove('green-border');
@@ -720,6 +753,11 @@ if (validScores.includes(Number(score))) {
                 if (checkScore(Number(totalScore))) {
                     textboxBandSum.classList.remove('red-border');
                     textboxBandSum.classList.add('green-border');
+                }
+                else if(Number(totalScore) == 97 || Number(totalScore) == 7 || Number(totalScore) == 79){
+                    textboxBandSum.classList.remove('red-border');
+                    textboxBandSum.classList.remove('green-border');
+                    textboxBandSum.classList.add('yellow-border');
                 }
     
                 else {
@@ -734,7 +772,7 @@ if (validScores.includes(Number(score))) {
                     resultCode2Band.classList.remove('red-border');
                     resultCode2Band.classList.add('green-border');
                 } 
-                else if(Number(totalScoreBlackBand) == 97 || Number(totalScoreBlackBand) == 7){
+                else if(Number(totalScoreBlackBand) == 97 || Number(totalScoreBlackBand) == 7 || Number(totalScoreBlackBand) == 79){
                     resultCode2Band.classList.remove('red-border');
                     resultCode2Band.classList.remove('green-border');
                     resultCode2Band.classList.add('yellow-border');
@@ -753,7 +791,7 @@ if (validScores.includes(Number(score))) {
                     resultCode1Band.classList.remove('red-border');
                     resultCode1Band.classList.add('green-border');
                 } 
-                else if(Number(totalScoreBlackDBand) == 97 || Number(totalScoreBlackDBand) == 7){
+                else if(Number(totalScoreBlackDBand) == 97 || Number(totalScoreBlackDBand) == 7 || Number(totalScoreBlackDBand) == 79){
                     resultCode1Band.classList.remove('red-border');
                     resultCode1Band.classList.remove('green-border');
                     resultCode1Band.classList.add('yellow-border');
@@ -781,6 +819,11 @@ if (validScores.includes(Number(score))) {
                     textboxSloganThaiScore.classList.remove('red-border');
                     textboxSloganThaiScore.classList.add('green-border');
                 } 
+                else if(Number(totalScoreSloganThai) == 97 || Number(totalScoreSloganThai) == 7 || Number(totalScoreSloganThai) == 79){
+                    textboxSloganThaiScore.classList.remove('red-border');
+                    textboxSloganThaiScore.classList.remove('green-border');
+                    textboxSloganThaiScore.classList.add('yellow-border');
+                }
                 else {
                     textboxSloganThaiScore.classList.remove('green-border');
                     textboxSloganThaiScore.classList.add('red-border');
@@ -791,6 +834,11 @@ if (validScores.includes(Number(score))) {
                     textboxSloganEnglishScore.classList.remove('red-border');
                     textboxSloganEnglishScore.classList.add('green-border');
                 } 
+                else if(Number(totalScoreSloganEng) == 97 || Number(totalScoreSloganEng) == 7 || Number(totalScoreSloganEng) == 79){
+                    textboxSloganEnglishScore.classList.remove('red-border');
+                    textboxSloganEnglishScore.classList.remove('green-border');
+                    textboxSloganEnglishScore.classList.add('yellow-border');
+                }
 
                 else {
                     textboxSloganEnglishScore.classList.remove('green-border');
@@ -804,7 +852,12 @@ if (validScores.includes(Number(score))) {
                     textboxSumSlogan.classList.add('green-border');
                 } 
                 
-    
+                else if(Number(totalScore) == 97 || Number(totalScore) == 7 || Number(totalScore) == 79){
+                    textboxSumSlogan.classList.remove('red-border');
+                    textboxSumSlogan.classList.remove('green-border');
+                    textboxSumSlogan.classList.add('yellow-border');
+                }
+
                 else {
                     textboxSumSlogan.classList.remove('green-border');
                     textboxSumSlogan.classList.add('red-border');
@@ -816,7 +869,7 @@ if (validScores.includes(Number(score))) {
                     resultCode2Slogan.classList.remove('red-border');
                     resultCode2Slogan.classList.add('green-border');
                 } 
-                else if(Number(totalScoreBlackSlogan) == 97 || Number(totalScoreBlackSlogan) == 7){
+                else if(Number(totalScoreBlackSlogan) == 97 || Number(totalScoreBlackSlogan) == 7 || Number(totalScoreBlackSlogan) == 79){
                     resultCode2Slogan.classList.remove('red-border');
                     resultCode2Slogan.classList.remove('green-border');
                     resultCode2Slogan.classList.add('yellow-border');
@@ -837,7 +890,7 @@ if (validScores.includes(Number(score))) {
                     resultCode1Slogan.classList.remove('red-border');
                     resultCode1Slogan.classList.add('green-border');
                 }
-                else if(Number(totalScoreBlackDSlogan) == 97 || Number(totalScoreBlackDSlogan) == 7){
+                else if(Number(totalScoreBlackDSlogan) == 97 || Number(totalScoreBlackDSlogan) == 7 || Number(totalScoreBlackDSlogan) == 79){
                     resultCode1Slogan.classList.remove('red-border');
                     resultCode1Slogan.classList.remove('green-border');
                     resultCode1Slogan.classList.add('yellow-border');
